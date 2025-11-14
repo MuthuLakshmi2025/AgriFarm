@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Agriculture</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body { background-color: #e9efc0; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background-color: #124d03; color: white; }
+    header nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: 500; }
+    header nav a:hover { color: #b4f28f; }
+
+    .hero { display: flex; height: 90vh; width: 100%; }
+    .hero-left { flex: 1; background-color: #0b2b03; color: white; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-left h3 { background-color: #1c5a17; display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 14px; letter-spacing: 2px; text-align: center; margin-bottom: 20px; }
+    .hero-left h1 { font-size: 42px; margin: 20px 0; }
+    .hero-left h1 span { color: #c2f25f; }
+    .hero-left p { color: #dcdcdc; margin-bottom: 30px; line-height: 1.6; }
+    .hero-left .buttons { display: flex; gap: 15px; }
+    .hero-left button { padding: 12px 30px; border-radius: 25px; border: none; font-weight: bold; cursor: pointer; font-size: 15px; background-color: #238d2c; color: #e3f0e6; }
+
+    .hero-right { flex: 1; background-image: url('org2.jpg'); background-size: cover; background-position: center; position: relative; }
+
+    .search-bar {
+        position: absolute;
+        top: 20px;
+        right: 150px;
+        background-color: rgb(206, 250, 210);
+        border-radius: 25px;
+        padding: 8px 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .search-bar input { border: none; outline: none; font-size: 14px; width: 180px; }
+    .search-bar button { border: none; background: none; font-size: 16px; cursor: pointer; }
+
+    footer { text-align: center; background-color: #1c3b28; color: white; padding: 15px; font-size: 14px; }
+
+    @media (max-width: 768px) {
+        .hero { flex-direction: column; height: auto; }
+        .hero-left, .hero-right { flex: none; width: 100%; height: auto; }
+        .hero-left { padding: 40px 20px; }
+        .search-bar { right: 20px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h2>AgroLife</h2>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-left">
+        <h3>GROW GREEN, LIVE CLEAN</h3>
+        <h1>DISCOVER FRESH, SUSTAINABLE <span>PRODUCTS</span> AND TIPS</h1>
+        <p>Explore organic farming products and expert tips to sustain the planet.</p>
+        <div class="buttons">
+            <a href="login.html"><button>LOGIN</button></a>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="search-bar">
+            <input type="text" id="homeSearch" placeholder="Search organic products...">
+            <button onclick="searchProducts()">🔍</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Creative Agriculture. All Rights Reserved.</p>
+</footer>
+
+<script>
+function searchProducts() {
+    const query = document.getElementById('homeSearch').value.trim().toLowerCase();
+    if(query) {
+        localStorage.setItem('searchQuery', query);
+        window.location.href = 'shop.html';
+    } else {
+        alert('Please enter a product name to search!');
+    }
+}
+
+// Press Enter key to search
+document.getElementById('homeSearch').addEventListener('keypress', function(e){
+    if(e.key === 'Enter') searchProducts();
+});
+</script>
+
+</body>
+</html>

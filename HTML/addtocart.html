@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add to Cart - AgroLife</title>
+
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{
+        background: url('atd1.jpg') no-repeat center center/cover;
+        backdrop-filter: blur(5px);
+        padding-top: 100px; /* space for fixed header */
+    }
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h2 { font-size: 24px; color: white; }
+    header nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
+    header nav a:hover { color: #b4f28f; }
+
+    .cart-container{
+        width: 80%;
+        margin:auto;
+        background:rgba(255,255,255,0.9);
+        border-radius:15px;
+        padding: 25px;
+        box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2{color:#124d03;text-align:center;margin-bottom:20px;font-size:32px;}
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:10px;
+    }
+
+    th,td{
+        text-align:center;
+        padding:12px;
+        border-bottom:2px solid #ddd;
+        font-size:18px;
+    }
+
+    th{background:#1c5a17;color:white;}
+
+    .product-img{
+        width:80px;
+        height:80px;
+        border-radius:10px;
+        object-fit:cover;
+    }
+
+    .qty-btn{
+        padding:5px 12px;
+        font-size:18px;
+        font-weight:bold;
+        cursor:pointer;
+        background:#1c5a17;
+        color:white;
+        border:none;
+        border-radius:6px;
+    }
+
+    .remove-btn{
+        background:#c82333;
+        padding:8px 14px;
+        border:none;
+        color:white;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    .total-box{
+        margin-top:20px;
+        font-size:22px;
+        font-weight:bold;
+        text-align:right;
+        color:#124d03;
+    }
+
+    .checkout-btn{
+        background:#e5e910;
+        color:rgb(8, 8, 8);
+        padding:12px 25px;
+        font-size:20px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        float:right;
+        margin-top:10px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="cart-container">
+    <h2>🛒 Your Cart</h2>
+
+    <table id="cartTable">
+        <tr>
+            <th>Product</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+        </tr>
+        <!-- Products inserted automatically from localStorage -->
+    </table>
+
+    <div class="total-box">
+        Delivery Charge: ₹<span id="delivery">40</span><br>
+        Total: ₹<span id="totalPrice">0</span>
+    </div>
+
+    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed To Checkout</button>
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+// Load cart and display in table
+function loadCart(){
+    let table = document.getElementById("cartTable");
+    table.innerHTML = `
+        <tr>
+            <th>Product</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+        </tr>
+    `;
+
+    let total = 0;
+
+    cart.forEach((item, index)=>{
+        let subtotal = item.price * item.qty;
+        total += subtotal;
+
+        let row = `
+        <tr>
+            <td><img src="${item.image}" class="product-img"></td>
+            <td>${item.name}</td>
+            <td>₹${item.price}</td>
+            <td>
+                <button class="qty-btn" onclick="changeQty(${index},-1)">-</button>
+                <span id="qty-${index}">${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty(${index},1)">+</button>
+            </td>
+            <td class="subtotal" id="sub-${index}">₹${subtotal}</td>
+            <td><button class="remove-btn" onclick="removeItem(${index})">Remove</button></td>
+        </tr>
+        `;
+        table.insertAdjacentHTML("beforeend", row);
+    });
+
+    document.getElementById("totalPrice").innerText = total + 40;
+}
+
+// Change quantity
+function changeQty(index, n){
+    if(cart[index].qty + n < 1) return;
+    cart[index].qty += n;
+    saveCart();
+    loadCart();
+}
+
+// Remove item
+function removeItem(index){
+    cart.splice(index,1);
+    saveCart();
+    loadCart();
+}
+
+// Save cart to localStorage
+function saveCart(){
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+}
+
+// Proceed to checkout
+function proceedToCheckout(){
+    if(cart.length === 0){
+        alert("Your cart is empty!");
+        return;
+    }
+    window.location.href = "checkout.html";
+}
+
+// Initial load
+loadCart();
+</script>
+
+</body>
+</html>

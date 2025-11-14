@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetable Seeds - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e1; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+    }
+
+    .add-cart { background-color: #2a6c20; }
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Vegetable Seeds Collection 🌽</h1>
+  <p>Order premium organic vegetable seeds to grow your fresh produce</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="veg1.html"><img src="tomato1.jpg" alt="Tomato Seeds"></a>
+    <h3>Tomato Seeds</h3>
+    <p>High-yield organic tomato seeds for all seasons.</p>
+    <div class="price">₹50 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Tomato Seeds', 50, 'tomato1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg2.html"><img src="carrot1.jpg" alt="Carrot Seeds"></a>
+    <h3>Carrot Seeds</h3>
+    <p>Grow crunchy and healthy carrots naturally at home.</p>
+    <div class="price">₹40 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Carrot Seeds', 40, 'carrot1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg3.html"><img src="Spinach1.jpg" alt="Spinach Seeds"></a>
+    <h3>Spinach Seeds</h3>
+    <p>Fast-growing, chemical-free spinach seed variety.</p>
+    <div class="price">₹35 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Spinach Seeds', 35, 'Spinach1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg4.html"><img src="Brinjal1.jpg" alt="Brinjal Seeds"></a>
+    <h3>Brinjal Seeds</h3>
+    <p>High-quality brinjal seeds that yield glossy purple fruits.</p>
+    <div class="price">₹45 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Brinjal Seeds', 45, 'Brinjal1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg5.html"><img src="chilli1.jpg" alt="Chilli Seeds"></a>
+    <h3>Chilli Seeds</h3>
+    <p>Grow spicy and flavorful chillies with high yield potential.</p>
+    <div class="price">₹55 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Chilli Seeds', 55, 'chilli1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg6.html"><img src="cucumber1.jpg" alt="Cucumber Seeds"></a>
+    <h3>Cucumber Seeds</h3>
+    <p>Perfect for summer gardens, fresh and crispy cucumbers.</p>
+    <div class="price">₹40 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Cucumber Seeds', 40, 'cucumber1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg7.html"><img src="pumpkin1.jpg" alt="Pumpkin Seeds"></a>
+    <h3>Pumpkin Seeds</h3>
+    <p>High-yield seeds for large, healthy pumpkins.</p>
+    <div class="price">₹60 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Pumpkin Seeds', 60, 'pumpkin1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg8.html"><img src="ladyfinger1.jpg" alt="Lady Finger Seeds"></a>
+    <h3>Lady Finger Seeds</h3>
+    <p>Grow soft, tender okra pods rich in nutrients.</p>
+    <div class="price">₹45 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Lady Finger Seeds', 45, 'ladyfinger1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg9.html"><img src="beetroot1.jpg" alt="Beetroot Seeds"></a>
+    <h3>Beetroot Seeds</h3>
+    <p>Organic seeds for vibrant and healthy red beets.</p>
+    <div class="price">₹35 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Beetroot Seeds', 35, 'beetroot1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg10.html"><img src="Capsicum1.jpg" alt="Capsicum Seeds"></a>
+    <h3>Capsicum Seeds</h3>
+    <p>Bright bell pepper seeds for colorful harvests.</p>
+    <div class="price">₹50 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Capsicum Seeds', 50, 'Capsicum1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg11.html"><img src="beans1.jpg" alt="Beans Seeds"></a>
+    <h3>Beans Seeds</h3>
+    <p>High-quality beans seeds for a rich, green harvest full of nutrition.</p>
+    <div class="price">₹45 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Beans Seeds', 45, 'beans1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="veg12.html"><img src="onion1.jpg" alt="Onion Seeds"></a>
+    <h3>Onion Seeds</h3>
+    <p>Grow fresh, flavorful onions with long shelf life and great yield.</p>
+    <div class="price">₹55 / pack</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Onion Seeds', 55, 'onion1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

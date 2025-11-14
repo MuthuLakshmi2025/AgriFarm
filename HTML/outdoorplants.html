@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Plants - AgroLife</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e2; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+    }
+
+    .add-cart { background-color: #2a6c20; }
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Outdoor Plants Collection 🌱</h1>
+  <p>Beautify your gardens with the best outdoor plants</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="outdoor1.html"><img src="goldencypress1.jpg" alt="Golden Cypress"></a>
+    <h3>Golden Cypress</h3>
+    <p>Evergreen conifer ideal for landscaping.</p>
+    <div class="price">₹650</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Golden Cypress', 650, 'goldencypress1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor2.html"><img src="thujaplant1.jpg" alt="Thuja Plant"></a>
+    <h3>Thuja Plant</h3>
+    <p>Low-maintenance hedge plant for garden borders.</p>
+    <div class="price">₹720</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Thuja Plant', 720, 'thujaplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor3.html"><img src="bougain1.jpg" alt="Bougainvillea Leaf Form"></a>
+    <h3>Bougainvillea Leaf Form</h3>
+    <p>Climber plant with strong leafy vines.</p>
+    <div class="price">₹380</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Bougainvillea Leaf Form', 380, 'bougain1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor4.html"><img src="bottlepalm1.jpg" alt="Bottle Palm"></a>
+    <h3>Bottle Palm</h3>
+    <p>Stunning outdoor palm, perfect for lawns.</p>
+    <div class="price">₹950</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Bottle Palm', 950, 'bottlepalm1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor5.html"><img src="dracaena1.jpg" alt="Dracaena Reflexa"></a>
+    <h3>Dracaena Reflexa</h3>
+    <p>Popular for outdoor decorative pots.</p>
+    <div class="price">₹450</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Dracaena Reflexa', 450, 'dracaena1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor6.html"><img src="yucca1.jpg" alt="Yucca Plant"></a>
+    <h3>Yucca Outdoor</h3>
+    <p>Hardy desert plant that thrives in sunlight.</p>
+    <div class="price">₹560</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Yucca Outdoor', 560, 'yucca1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor7.html"><img src="elephantbush1.jpg" alt="Elephant Bush"></a>
+    <h3>Elephant Bush</h3>
+    <p>Heat-tolerant succulent for gardens.</p>
+    <div class="price">₹320</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Elephant Bush', 320, 'elephantbush1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor8.html"><img src="jadeout1.jpg" alt="Jade Outdoor"></a>
+    <h3>Jade Outdoor Shrub</h3>
+    <p>Thick leaves shrink-resistant in sun.</p>
+    <div class="price">₹400</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Jade Outdoor Shrub', 400, 'jadeout1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor9.html"><img src="redcorton1.jpg" alt="Croton"></a>
+    <h3>Outdoor Red Croton</h3>
+    <p>Bright sunlight brings vibrant foliage.</p>
+    <div class="price">₹300</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Outdoor Red Croton', 300, 'redcorton1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor10.html"><img src="pothosout1.jpg" alt="Outdoor Pothos"></a>
+    <h3>Pothos Outdoor Creeper</h3>
+    <p>Perfect for outdoor walls and fences.</p>
+    <div class="price">₹220</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Pothos Outdoor Creeper', 220, 'pothosout1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor11.html"><img src="schefflera1.jpg" alt="Schefflera"></a>
+    <h3>Schefflera Plant</h3>
+    <p>Attractive umbrella-like foliage.</p>
+    <div class="price">₹500</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Schefflera Plant', 500, 'schefflera1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="outdoor12.html"><img src="boxwood1.jpg" alt="Boxwood Shrub"></a>
+    <h3>Boxwood Shrub</h3>
+    <p>Ideal for hedges and outdoor shapes.</p>
+    <div class="price">₹700</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Boxwood Shrub', 700, 'boxwood1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 AgroLife. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

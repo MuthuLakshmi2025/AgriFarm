@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indoor Plants - AgroLife</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #eaf5e1;
+    }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+    header nav a:hover {
+      color: #b4f28f;
+    }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 {
+      font-size: 34px;
+    }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 5px;
+      color: #124d03;
+      font-size: 18px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .product-card .price {
+      color: #0b2b03;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #2a6c20;
+      color: white;
+      font-size: 14px;
+    }
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Indoor Plants Collection</h1>
+  <p>Bring fresh air & greenery to your home 🍃🏡</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="plant1.html"><img src="moneyplant1.jpg" alt="Money Plant"></a>
+    <h3>Money Plant</h3>
+    <p>Attracts good energy & purifies air indoors.</p>
+    <div class="price">₹220</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Money Plant',220,'moneyplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant2.html"><img src="snakeplant1.jpg" alt="Snake Plant"></a>
+    <h3>Snake Plant</h3>
+    <p>Hardy plant that improves air quality.</p>
+    <div class="price">₹450</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Snake Plant',450,'snakeplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant3.html"><img src="peacelily1.jpg" alt="Peace Lily"></a>
+    <h3>Peace Lily</h3>
+    <p>Elegant flowering plant for calm homes.</p>
+    <div class="price">₹350</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Peace Lily',350,'peacelily1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant4.html"><img src="aloevera1.jpg" alt="Aloe Vera"></a>
+    <h3>Aloe Vera</h3>
+    <p>Medicinal plant with healing gel leaves.</p>
+    <div class="price">₹180</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Aloe Vera',180,'aloevera1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant5.html"><img src="arecapalm1.jpg" alt="Areca Palm"></a>
+    <h3>Areca Palm</h3>
+    <p>Beautiful plant for fresh home atmosphere.</p>
+    <div class="price">₹520</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Areca Palm',520,'arecapalm1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant6.html"><img src="bonsai1.jpg" alt="Bonsai Plant"></a>
+    <h3>Bonsai</h3>
+    <p>Mini plant tree — brings elegance indoors.</p>
+    <div class="price">₹750</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Bonsai',750,'bonsai1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant7.html"><img src="spiderplant1.jpg" alt="Spider Plant"></a>
+    <h3>Spider Plant</h3>
+    <p>Air filter plant — best for bedrooms.</p>
+    <div class="price">₹260</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Spider Plant',260,'spiderplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant8.html"><img src="jadeplant1.jpg" alt="Jade Plant"></a>
+    <h3>Jade Plant</h3>
+    <p>Lucky succulent plant — symbolizes prosperity.</p>
+    <div class="price">₹300</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Jade Plant',300,'jadeplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant9.html"><img src="luckybamboo1.jpg" alt="Lucky Bamboo"></a>
+    <h3>Lucky Bamboo</h3>
+    <p>Symbol of fortune — easy to maintain indoors.</p>
+    <div class="price">₹240</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Lucky Bamboo',240,'luckybamboo1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant10.html"><img src="pothos1.jpg" alt="Pothos"></a>
+    <h3>Pothos</h3>
+    <p>Trailing vine — adds beauty to walls & shelves.</p>
+    <div class="price">₹200</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Pothos',200,'pothos1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant11.html"><img src="zzplant1.jpg" alt="ZZ Plant"></a>
+    <h3>ZZ Plant</h3>
+    <p>Low-light indoor plant with glossy leaves.</p>
+    <div class="price">₹650</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('ZZ Plant',650,'zzplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="plant12.html"><img src="rubberplant1.jpg" alt="Rubber Plant"></a>
+    <h3>Rubber Plant</h3>
+    <p>Stylish indoor plant with big green leaves.</p>
+    <div class="price">₹480</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Rubber Plant',480,'rubberplant1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+
+<footer>
+  <p>&copy; 2025 AgroLife. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

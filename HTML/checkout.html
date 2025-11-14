@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - AgroLife</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+  body { background-color:#f4f4f4; padding-top:80px; }
+
+  header {
+    background-color: #1c5a17;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  header h2 { font-size: 24px; }
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+  }
+  header nav a:hover { color: #b4f28f; }
+
+  .checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .form-section, .summary-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .form-section { flex: 2; min-width: 350px; }
+  .summary-section { flex: 1; min-width: 280px; position: sticky; top: 100px; height: fit-content; }
+
+  h3 { margin-bottom: 15px; color:#124d03; }
+  input, select { width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc; }
+
+  .order-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .order-item img { width: 50px; height: 50px; object-fit: cover; margin-right: 10px; border-radius: 6px; }
+  .order-item-details { flex: 1; display: flex; align-items: center; }
+  .quantity-controls { display: flex; align-items: center; gap: 5px; }
+  .quantity-controls button { padding: 5px 8px; border: none; background-color: #c76500; color:white; cursor: pointer; border-radius:4px; }
+  .quantity-controls span { min-width: 20px; text-align:center; }
+
+  .order-summary { background: #fafafa; padding: 15px; border-radius: 10px; margin-top:15px; }
+  .pay-btn { width: 100%; padding: 12px; background-color: #c76500; color:white; font-size:18px; border:none; border-radius:8px; cursor:pointer; margin-top:15px; }
+  .pay-btn:hover { background-color: #f28c2a; }
+
+  .remove-btn { background: #c82333; padding: 3px 8px; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+  .checkbox-container { display:flex; align-items:center; gap:10px; margin-top:10px; }
+
+  @media(max-width: 900px) {
+    .checkout-container { flex-direction: column; }
+    .summary-section { position: relative; top: 0; }
+  }
+
+  /* Popup Modal */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .popup-content h2 { color: #124d03; }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #c82333;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="checkout-container">
+
+  <!-- Delivery & Payment Form -->
+  <div class="form-section">
+    <h3>Delivery Address</h3>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="text" placeholder="Street Address" required>
+    <input type="text" placeholder="City/Suburb" required>
+    <select id="state">
+      <option value="">Select State/Territory</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Maharashtra">Maharashtra</option>
+    </select>
+    <input type="text" placeholder="Postal Code" required>
+    <select id="country">
+      <option value="">Select Country</option>
+      <option value="India">India</option>
+      <option value="Canada">Canada</option>
+    </select>
+    <div class="checkbox-container">
+      <input type="checkbox" checked>
+      <label>Same as billing address</label>
+    </div>
+
+    <h3>Payment Method</h3>
+    <select id="paymentMethod">
+      <option value="">Select Payment Method</option>
+      <option value="Card">Credit/Debit Card</option>
+      <option value="PayPal">PayPal</option>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+    <button class="pay-btn" onclick="payNow()">Pay Now</button>
+  </div>
+
+  <!-- Order Summary -->
+  <div class="summary-section">
+    <h3>Review Your Order</h3>
+    <div id="order-items"></div>
+
+    <div class="order-summary">
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>Delivery: ₹40</p>
+      <p><strong>Total: ₹<span id="total">0</span></strong></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your purchase. Your order has been placed.</p>
+  </div>
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+let orderItemsDiv = document.getElementById('order-items');
+
+function renderCart() {
+    orderItemsDiv.innerHTML = '';
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+        let lineTotal = item.price * item.qty;
+        subtotal += lineTotal;
+
+        let div = document.createElement('div');
+        div.classList.add('order-item');
+        div.innerHTML = `
+            <div class="order-item-details">
+                <img src="${item.image}" alt="${item.name}">
+                <span>${item.name}</span>
+            </div>
+            <div class="quantity-controls">
+                <button onclick="changeQty(${index},-1)">-</button>
+                <span>${item.qty}</span>
+                <button onclick="changeQty(${index},1)">+</button>
+            </div>
+            <span>₹<span class="line-total">${lineTotal}</span></span>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+        orderItemsDiv.appendChild(div);
+    });
+
+    document.getElementById('subtotal').textContent = subtotal;
+    document.getElementById('total').textContent = subtotal + 40;
+}
+
+function changeQty(index, n){
+    if(cart[index].qty + n < 1) return;
+    cart[index].qty += n;
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    renderCart();
+}
+
+function removeItem(index){
+    cart.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    renderCart();
+}
+
+function payNow() {
+    let paymentMethod = document.getElementById('paymentMethod').value;
+    if (paymentMethod === "") {
+        alert("Please select a payment method!");
+        return;
+    }
+
+    // Collect form data
+    const orderData = {
+        first_name: document.querySelector('input[placeholder="First Name"]').value,
+        last_name: document.querySelector('input[placeholder="Last Name"]').value,
+        email: document.querySelector('input[placeholder="Email Address"]').value,
+        phone: document.querySelector('input[placeholder="Phone Number"]').value,
+        address: document.querySelector('input[placeholder="Street Address"]').value,
+        city: document.querySelector('input[placeholder="City/Suburb"]').value,
+        state: document.getElementById('state').value,
+        postal_code: document.querySelector('input[placeholder="Postal Code"]').value,
+        country: document.getElementById('country').value,
+        payment_method: paymentMethod,
+        total_amount: document.getElementById('total').textContent,
+        order_items: JSON.stringify(cart)
+    };
+
+    // Send data to PHP backend
+    fetch("checkout.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(orderData)
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data.trim() === "success") {
+            document.getElementById('popup').style.display = 'block';
+            localStorage.removeItem("cartItems");
+        } else {
+            alert("Error: " + data);
+        }
+    })
+    .catch(err => alert("Error: " + err));
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    window.location.href = "homepage.html";
+}
+
+window.onclick = function(event) {
+  let popup = document.getElementById('popup');
+  if (event.target == popup) {
+    popup.style.display = "none";
+    window.location.href = "homepage.html";
+  }
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Fertilizers - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f3f7ea; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+      background-color: #2a6c20;
+    }
+
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Liquid Fertilizers Collection</h1>
+  <p>Boost plant growth with powerful organic liquid nutrients 💧🌿</p>
+</div>
+
+<section class="products-container">
+
+  <!-- Repeat each with the JS function -->
+  <div class="product-card">
+    <a href="liquid1.html"><img src="liquid1.jpg" alt="Seaweed Liquid Fertilizer"></a>
+    <h3>Seaweed Liquid Fertilizer</h3>
+    <p>Boosts plant growth and improves nutrient absorption.</p>
+    <div class="price">₹150 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Seaweed Liquid Fertilizer', 150, 'liquid1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid2.html"><img src="fishamino1.jpg" alt="Fish Amino Acid"></a>
+    <h3>Fish Amino Acid</h3>
+    <p>Rich natural tonic for vigorous plant growth.</p>
+    <div class="price">₹180 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Fish Amino Acid', 180, 'fishamino1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid3.html"><img src="pancha1.jpg" alt="Panchagavya Liquid"></a>
+    <h3>Panchagavya Liquid</h3>
+    <p>Organic blend for overall plant health and yield.</p>
+    <div class="price">₹170 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Panchagavya Liquid', 170, 'pancha1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid4.html"><img src="vermiwash1.jpg" alt="Vermiwash Liquid"></a>
+    <h3>Vermiwash Liquid</h3>
+    <p>Strengthens plant immunity and root growth.</p>
+    <div class="price">₹160 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Vermiwash Liquid', 160, 'vermiwash1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid5.html"><img src="bananapeel1.jpg" alt="Banana Peel Liquid"></a>
+    <h3>Banana Peel Liquid</h3>
+    <p>Natural potassium source for flowering plants.</p>
+    <div class="price">₹140 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Banana Peel Liquid', 140, 'bananapeel1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid6.html"><img src="onionpeel1.jpg" alt="Onion Peel Liquid"></a>
+    <h3>Onion Peel Liquid</h3>
+    <p>Boosts flowering and strengthens plant stems.</p>
+    <div class="price">₹130 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Onion Peel Liquid', 130, 'onionpeel1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid7.html"><img src="neemliq1.jpg" alt="Neem Liquid Fertilizer"></a>
+    <h3>Neem Liquid Fertilizer</h3>
+    <p>Natural pest repellent and soil enhancer.</p>
+    <div class="price">₹190 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Neem Liquid Fertilizer', 190, 'neemliq1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid8.html"><img src="mustardcake1.jpg" alt="Mustard Cake Liquid"></a>
+    <h3>Mustard Cake Liquid</h3>
+    <p>Protein-rich fertilizer for plant growth.</p>
+    <div class="price">₹120 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Mustard Cake Liquid', 120, 'mustardcake1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid9.html"><img src="cowurine1.jpg" alt="Cow Urine Liquid"></a>
+    <h3>Cow Urine Liquid</h3>
+    <p>Boosts plant immunity and soil microbes.</p>
+    <div class="price">₹110 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Cow Urine Liquid', 110, 'cowurine1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid10.html"><img src="composttea1.jpg" alt="Compost Tea"></a>
+    <h3>Compost Tea</h3>
+    <p>Enhances soil fertility and plant nutrition.</p>
+    <div class="price">₹160 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Compost Tea', 160, 'composttea1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid11.html"><img src="humicacid1.jpg" alt="Humic Acid Liquid"></a>
+    <h3>Humic Acid Liquid</h3>
+    <p>Improves soil structure and nutrient uptake.</p>
+    <div class="price">₹200 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Humic Acid Liquid', 200, 'humicacid1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="liquid12.html"><img src="jaggerypow1.jpg" alt="Jaggery Mix Bio Booster"></a>
+    <h3>Jaggery Mix Bio Booster</h3>
+    <p>Feeds microbes and enhances plant growth.</p>
+    <div class="price">₹150 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Jaggery Mix Bio Booster', 150, 'jaggerypow1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

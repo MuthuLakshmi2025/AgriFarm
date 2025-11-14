@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - AgroLife</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f3f7f0; color: #1a2e1a; }
+
+    header {
+      background-color: #124d03; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 60px; position: sticky; top: 0; z-index: 100;
+    }
+    header nav a { color: white; text-decoration: none; margin-left: 28px; font-weight: 500; }
+    header nav a:hover { color: #b4f28f; }
+
+    .contact-banner {
+      background: url("contact-bg.jpg") rgba(24, 112, 38, 0.55);
+      background-blend-mode: darken; background-size: cover; background-position: center;
+      height: 42vh; color: white; display: flex; justify-content: center;
+      align-items: center; text-align: center; padding: 0 20px;
+    }
+    .contact-banner h1 { font-size: 38px; margin-bottom: 10px; }
+    .contact-banner p { font-size: 14px; max-width: 600px; }
+
+    .contact-section { display: flex; justify-content: center; gap: 50px; padding: 60px 70px; }
+
+    .contact-form, .contact-info {
+      background: white; width: 43%; padding: 30px;
+      border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+
+    .contact-form h2, .contact-info h2 { color: #124d03; margin-bottom: 20px; font-size: 22px; }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px; margin: 10px 0;
+      border: 1px solid #9bbf8e; border-radius: 6px; outline: none; font-size: 14px;
+    }
+    .contact-form textarea { height: 120px; resize: none; }
+
+    .contact-form button {
+      width: 100%; padding: 12px; border: none;
+      background: #1c5a17; color: white; font-size: 16px;
+      border-radius: 6px; cursor: pointer; margin-top: 10px;
+    }
+    .contact-form button:hover { background: #0f3d0c; }
+
+    .contact-info p { font-size: 14px; margin-bottom: 15px; line-height: 1.6; color: #333333; }
+
+    .info-item { display: flex; align-items: center; gap: 12px; margin: 12px 0; }
+    .info-item span {
+      font-size: 18px; background: #d4f8d5; padding: 8px;
+      border-radius: 50%; color: #124d03;
+    }
+
+    footer { background-color: #1c3b28; color: white; text-align: center; padding: 14px; margin-top: 50px; font-size: 14px; }
+
+    @media(max-width: 900px) {
+      .contact-section { flex-direction: column; padding: 40px 20px; }
+      .contact-form, .contact-info { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>AgroLife</h2>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-banner">
+    <div>
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Whether you have questions about our products, farming tips, or support — we’re here to help.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <!-- ✅ Corrected Form -->
+      <form action="contact.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" name="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Let's Connect</h2>
+      <p>Feel free to reach out to us for inquiries, support, or collaborations. We will respond as soon as possible.</p>
+
+      <div class="info-item"><span>📧</span><p>agrolife.support@gmail.com</p></div>
+      <div class="info-item"><span>📞</span><p>+91 98765 43210</p></div>
+      <div class="info-item"><span>📍</span><p>Green Street, Coimbatore, Tamil Nadu, India</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 AgroLife — All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

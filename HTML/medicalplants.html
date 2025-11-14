@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicinal Plants - AgroLife</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e2; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+      background-color: #2a6c20;
+    }
+
+    .add-cart:hover {
+      background-color: #3e8e41;
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Medicinal Plants Collection 🌿</h1>
+  <p>Healing nature for a healthier life</p>
+</div>
+
+<section class="products-container">
+
+  <!-- PRODUCT CARDS -->
+  <div class="product-card">
+    <a href="tulsi.html"><img src="tulsi1.jpg" alt="Tulsi"></a>
+    <h3>Tulsi</h3>
+    <p>Boosts immunity and treats cough & cold.</p>
+    <div class="price">₹120</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Tulsi', 120, 'tulsi1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="aloevera.html"><img src="aloevera1.jpg" alt="Aloe Vera"></a>
+    <h3>Aloe Vera</h3>
+    <p>Skin care, digestion & healing benefits.</p>
+    <div class="price">₹150</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Aloe Vera', 150, 'aloevera1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="neem.html"><img src="neem1.jpg" alt="Neem"></a>
+    <h3>Neem</h3>
+    <p>Powerful antibacterial plant.</p>
+    <div class="price">₹160</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Neem', 160, 'neem1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="mint.html"><img src="mint1.jpg" alt="Mint"></a>
+    <h3>Mint</h3>
+    <p>Good for digestion and cold relief.</p>
+    <div class="price">₹90</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Mint', 90, 'mint1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="lemongrass.html"><img src="lemongrass1.jpg" alt="Lemongrass"></a>
+    <h3>Lemongrass</h3>
+    <p>Promotes relaxation and digestion.</p>
+    <div class="price">₹130</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Lemongrass', 130, 'lemongrass1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="curryleaf.html"><img src="curryleaf1.jpg" alt="Curry Leaves"></a>
+    <h3>Curry Leaves</h3>
+    <p>Great for hair and digestion.</p>
+    <div class="price">₹110</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Curry Leaves', 110, 'curryleaf1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 AgroLife. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

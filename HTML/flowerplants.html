@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flowering Plants - AgroLife</title>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+  body{background-color:#eaf5e2;}
+
+  header{
+    background-color:#1c5a17;color:white;display:flex;justify-content:space-between;
+    align-items:center;padding:20px 60px;
+  }
+  header nav a{color:white;text-decoration:none;margin-left:30px;font-weight:500;}
+  header nav a:hover{color:#b4f28f;}
+
+  .page-title{text-align:center;background-color:#0b2b03;color:#d8f3dc;padding:40px 0;}
+  .page-title h1{font-size:34px;}
+
+  .products-container{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:30px;padding:50px;
+  }
+
+  .product-card{
+    background:white;width:260px;border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    text-align:center;padding:20px;transition:0.3s;
+  }
+  .product-card:hover{transform:translateY(-5px);}
+  .product-card img{
+    width:100%;height:180px;border-radius:10px;object-fit:cover;cursor:pointer;
+  }
+  .product-card h3{margin:15px 0 5px;color:#124d03;}
+  .product-card p{font-size:14px;color:#555;}
+  .product-card .price{color:#0b2b03;font-weight:600;margin:10px 0;}
+
+  .add-cart{
+    padding:8px 16px;border:none;border-radius:20px;cursor:pointer;
+    color:white;font-size:14px;background:#2a6c20;
+  }
+  .add-cart:hover{background:#3e8e41;}
+
+  footer{
+    background-color:#1c3b28;color:white;text-align:center;padding:15px;margin-top:40px;
+  }
+</style>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Flowering Plants Collection 🌸</h1>
+  <p>Colourful blooms for a beautiful garden</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="roseplant.html"><img src="roseplant1.jpg"></a>
+    <h3>Rose</h3>
+    <p>Beautiful fragrant blooms that symbolize love.</p>
+    <div class="price">₹200</div>
+    <button class="add-cart" onclick="addToCart('Rose',200,'roseplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="hibiscusplant.html"><img src="hibicusplant1.jpg"></a>
+    <h3>Hibiscus</h3>
+    <p>Large colourful flowers loved by butterflies.</p>
+    <div class="price">₹160</div>
+    <button class="add-cart" onclick="addToCart('Hibiscus',160,'hibicusplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="jasmineplant.html"><img src="jasmineplant1.jpg"></a>
+    <h3>Jasmine</h3>
+    <p>Fragrant white flowers that bloom at night.</p>
+    <div class="price">₹150</div>
+    <button class="add-cart" onclick="addToCart('Jasmine',150,'jasmineplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="marigoldplant.html"><img src="marigoldplant1.jpg"></a>
+    <h3>Marigold</h3>
+    <p>Bright and widely used in decorations.</p>
+    <div class="price">₹90</div>
+    <button class="add-cart" onclick="addToCart('Marigold',90,'marigoldplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="sunflowerplant.html"><img src="sunflowerplant1.jpg"></a>
+    <h3>Sunflower</h3>
+    <p>Yellow blooms that follow the sunlight.</p>
+    <div class="price">₹120</div>
+    <button class="add-cart" onclick="addToCart('Sunflower',120,'sunflowerplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="lilyplant.html"><img src="lilyplant1.jpg"></a>
+    <h3>Lily</h3>
+    <p>Attractive trumpet-shaped flowers.</p>
+    <div class="price">₹220</div>
+    <button class="add-cart" onclick="addToCart('Lily',220,'lilyplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="orchidplant.html"><img src="orchidplant1.jpg"></a>
+    <h3>Orchid</h3>
+    <p>Elegant exotic flowers with unique patterns.</p>
+    <div class="price">₹350</div>
+    <button class="add-cart" onclick="addToCart('Orchid',350,'orchidplant1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="bougain.html"><img src="bougain1.jpg"></a>
+    <h3>Bougainvillea</h3>
+    <p>Colourful hardy climber for outdoor spaces.</p>
+    <div class="price">₹180</div>
+    <button class="add-cart" onclick="addToCart('Bougainvillea',180,'bougain1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="petunia.html"><img src="petunia1.jpg"></a>
+    <h3>Petunia</h3>
+    <p>Vibrant flowers for pots and gardens.</p>
+    <div class="price">₹95</div>
+    <button class="add-cart" onclick="addToCart('Petunia',95,'petunia1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="zinnia.html"><img src="zinnia1.jpg"></a>
+    <h3>Zinnia</h3>
+    <p>Bright colourful flowers easy to grow.</p>
+    <div class="price">₹70</div>
+    <button class="add-cart" onclick="addToCart('Zinnia',70,'zinnia1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="dahlia.html"><img src="dahlia1.jpg"></a>
+    <h3>Dahlia</h3>
+    <p>Large eye-catching stunning blooms.</p>
+    <div class="price">₹250</div>
+    <button class="add-cart" onclick="addToCart('Dahlia',250,'dahlia1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="lavenderplant.html"><img src="lavenderplant1.jpg"></a>
+    <h3>Lavender</h3>
+    <p>Purple flowers with relaxing aroma.</p>
+    <div class="price">₹300</div>
+    <button class="add-cart" onclick="addToCart('Lavender',300,'lavenderplant1.jpg')">Add to Cart</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 AgroLife. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

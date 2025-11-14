@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AgroLife</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #c1f193;
+        }
+
+        header {
+            background-color: #124d03;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: #b4f28f;
+        }
+
+        .shop-container {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .shop-container h1 {
+            font-size: 36px;
+            color: #124d03;
+            margin-bottom: 40px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .category-card {
+            background-color: white;
+            width: 220px;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;  /* 🔹 Removes underline */
+            color: inherit;
+        }
+
+        .category-card:hover {
+            background-color: #d5efc2;
+            transform: translateY(-5px);
+        }
+
+        .category-card img {
+            width: 150px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            color: #1c3b28;
+            font-size: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #1c3b28;
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 122px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>AgroLife</h2>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="learn.html">Learn</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Shop Categories -->
+    <div class="shop-container">
+        <h1>Shop by Category</h1>
+
+        <div class="categories">
+            <a href="seeds.html" class="category-card">
+                <img src="seed1.jpg" alt="Seeds">
+                <h3>Seeds</h3>
+            </a>
+
+            <a href="fertilizers.html" class="category-card">
+                <img src="fert1.jpg" alt="Fertilizers">
+                <h3>Fertilizers</h3>
+            </a>
+
+            <a href="tools.html" class="category-card">
+                <img src="tools1.jpg" alt="Tools">
+                <h3>Farming Tools</h3>
+            </a>
+
+            <a href="plants.html" class="category-card">
+                <img src="plant1.jpg" alt="Plants">
+                <h3>Plants</h3>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Creative Agriculture. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

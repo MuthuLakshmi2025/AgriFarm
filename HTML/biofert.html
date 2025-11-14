@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Fertilizers - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color:#f3f7ea; }
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+    header nav a:hover { color: #b4f28f; }
+    .page-title { text-align: center; background-color: #0b2b03; color: #d8f3dc; padding: 40px 0; }
+    .page-title h1 { font-size: 34px; }
+    .products-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 50px; }
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+    .btn-container { display: flex; justify-content: center; }
+    button {
+      padding: 8px 16px; border: none; border-radius: 20px;
+      cursor: pointer; color: white; font-size: 14px;
+    }
+    .add-cart { background-color: #2a6c20; }
+    .add-cart:hover { background-color: #3e8e41; }
+    footer { background-color: #1c3b28; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Bio-Fertilizers Collection</h1>
+  <p>Boost soil fertility and plant growth using beneficial microorganisms 🌱</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <img src="rhizobium1.jpg" alt="Rhizobium Biofertilizer">
+    <h3>Rhizobium Biofertilizer</h3>
+    <p>Improves nitrogen fixation in legume plants for better growth.</p>
+    <div class="price">₹120 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Rhizobium Biofertilizer',120,'rhizobium1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="azotobacter1.jpg" alt="Azotobacter">
+    <h3>Azotobacter</h3>
+    <p>Enhances nitrogen content in soil and boosts crop yield.</p>
+    <div class="price">₹140 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Azotobacter',140,'azotobacter1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="azospirillum1.jpg" alt="Azospirillum">
+    <h3>Azospirillum</h3>
+    <p>Promotes root development and increases plant vigor.</p>
+    <div class="price">₹135 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Azospirillum',135,'azospirillum1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="psb1.jpg" alt="Phosphate Solubilizing Bacteria">
+    <h3>Phosphate Solubilizing Bacteria (PSB)</h3>
+    <p>Enhances phosphorus availability in soil naturally.</p>
+    <div class="price">₹150 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('PSB',150,'psb1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="bluegreen1.jpg" alt="Blue Green Algae">
+    <h3>Blue-Green Algae (BGA)</h3>
+    <p>Improves soil nitrogen fertility—ideal for paddy fields.</p>
+    <div class="price">₹90 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Blue-Green Algae (BGA)',90,'bluegreen1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="Mycorrhiza1.jpg" alt="Mycorrhiza">
+    <h3>Mycorrhiza</h3>
+    <p>Strengthens roots and improves nutrient and water absorption.</p>
+    <div class="price">₹160 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Mycorrhiza',160,'Mycorrhiza1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="trichoderma1.jpg" alt="Trichoderma">
+    <h3>Trichoderma</h3>
+    <p>Protects plants against soil-borne diseases and promotes growth.</p>
+    <div class="price">₹130 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Trichoderma',130,'trichoderma1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="kmb1.jpg" alt="KMB">
+    <h3>Potash Mobilizing Bacteria (KMB)</h3>
+    <p>Increases potash availability for better flowering and yield.</p>
+    <div class="price">₹145 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('KMB',145,'kmb1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="zsb1.jpg" alt="ZSB">
+    <h3>Zinc Solubilizing Bacteria (ZSB)</h3>
+    <p>Boosts zinc uptake — essential for plant growth and enzymes.</p>
+    <div class="price">₹155 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('ZSB',155,'zsb1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="sob1.jpg" alt="SOB">
+    <h3>Sulphur Oxidizing Bacteria (SOB)</h3>
+    <p>Improves sulphur content in soil for greener leaves.</p>
+    <div class="price">₹150 / packet</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('SOB',150,'sob1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="em1.jpg" alt="EM">
+    <h3>EM (Effective Microorganisms)</h3>
+    <p>Restores soil health, increases microbes & plant immunity.</p>
+    <div class="price">₹180 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Effective Microorganisms',180,'em1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="npk1.jpg" alt="Bio NPK">
+    <h3>Bio NPK</h3>
+    <p>Complete organic alternative to chemical NPK fertilizers.</p>
+    <div class="price">₹200 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Bio NPK',200,'npk1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

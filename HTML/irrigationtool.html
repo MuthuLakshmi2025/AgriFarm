@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irrigation Tools - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f3f7ea; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+      background-color: #2a6c20;
+    }
+
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Irrigation Tools Collection</h1>
+  <p>Effective tools for smart and efficient irrigation 💧🌾</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="irrigation1.html"><img src="dripirri1.jpg" alt="Drip Irrigation Kit"></a>
+    <h3>Drip Irrigation Kit</h3>
+    <p>Ensures controlled water supply directly to plant roots.</p>
+    <div class="price">₹850</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Drip Irrigation Kit', 850, 'dripirri1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation2.html"><img src="sprinkler1.jpg" alt="Sprinkler System"></a>
+    <h3>Sprinkler System</h3>
+    <p>Uniform watering solution for lawns and crop fields.</p>
+    <div class="price">₹1,500</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Sprinkler System', 1500, 'sprinkler1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation3.html"><img src="soaker1.jpg" alt="Soaker Hose"></a>
+    <h3>Soaker Hose</h3>
+    <p>Slowly releases water to hydrate soil efficiently.</p>
+    <div class="price">₹620</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Soaker Hose', 620, 'soaker1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation4.html"><img src="raingun1.jpg" alt="Rain Gun Sprinkler"></a>
+    <h3>Rain Gun Sprinkler</h3>
+    <p>High-pressure sprinkler suitable for large farms.</p>
+    <div class="price">₹2,800</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Rain Gun Sprinkler', 2800, 'raingun1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation5.html"><img src="watercan1.jpg" alt="Garden Watering Can"></a>
+    <h3>Garden Watering Can</h3>
+    <p>Manual tool to water small plants and seedlings.</p>
+    <div class="price">₹250</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Garden Watering Can', 250, 'watercan1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation6.html"><img src="irritime1.jpg" alt="Irrigation Timer"></a>
+    <h3>Irrigation Timer</h3>
+    <p>Automatically controls water flow saving time and water.</p>
+    <div class="price">₹1,200</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Irrigation Timer', 1200, 'irritime1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation7.html"><img src="waterpump1.jpg" alt="Water Pump"></a>
+    <h3>Water Pump</h3>
+    <p>Used to pump water from wells, ponds or tanks to fields.</p>
+    <div class="price">₹3,600</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Water Pump', 3600, 'waterpump1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation8.html"><img src="pipespray1.jpg" alt="PVC Sprayer Pipe"></a>
+    <h3>PVC Sprayer Pipe</h3>
+    <p>Distributes water evenly across the field.</p>
+    <div class="price">₹180</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('PVC Sprayer Pipe', 180, 'pipespray1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation9.html"><img src="microsprink1.jpg" alt="Micro Sprinkler"></a>
+    <h3>Micro Sprinkler</h3>
+    <p>Ideal for vegetable gardens and nursery irrigation.</p>
+    <div class="price">₹300</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Micro Sprinkler', 300, 'microsprink1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation10.html"><img src="dripemitter1.jpg" alt="Drip Emitters"></a>
+    <h3>Drip Emitters</h3>
+    <p>Controls water flow to individual plants.</p>
+    <div class="price">₹150</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Drip Emitters', 150, 'dripemitter1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation11.html"><img src="irrifilter1.jpg" alt="Irrigation Filter"></a>
+    <h3>Irrigation Filter</h3>
+    <p>Removes impurities and protects irrigation equipment.</p>
+    <div class="price">₹450</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Irrigation Filter', 450, 'irrifilter1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="irrigation12.html"><img src="fertkit1.jpg" alt="Fertigation Kit"></a>
+    <h3>Fertigation Kit</h3>
+    <p>Mixes fertilizers with irrigation water for better growth.</p>
+    <div class="price">₹2,200</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Fertigation Kit', 2200, 'fertkit1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

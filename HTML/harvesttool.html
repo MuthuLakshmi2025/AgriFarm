@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harvesting Tools - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e1; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+      background-color: #2a6c20;
+    }
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Harvesting Tools Collection</h1>
+  <p>Efficient tools for smooth and quick harvesting 🌾🔧</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="harvest1.html"><img src="sickle1.jpg" alt="Sickle"></a>
+    <h3>Sickle</h3>
+    <p>Traditional tool for cutting crops and grass.</p>
+    <div class="price">₹120</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Sickle', 120, 'sickle1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest2.html"><img src="scythe1.jpg" alt="Scythe"></a>
+    <h3>Scythe</h3>
+    <p>Used for harvesting grain crops and clearing grass.</p>
+    <div class="price">₹450</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Scythe', 450, 'scythe1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest3.html"><img src="harvestknife1.jpg" alt="Harvesting Knife"></a>
+    <h3>Harvesting Knife</h3>
+    <p>Sharp blade for cutting fruits and vegetables cleanly.</p>
+    <div class="price">₹180</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Harvesting Knife', 180, 'harvestknife1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest4.html"><img src="gardshear1.jpg" alt="Garden Shears"></a>
+    <h3>Garden Shears</h3>
+    <p>Perfect for trimming and harvesting leafy vegetables.</p>
+    <div class="price">₹260</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Garden Shears', 260, 'gardshear1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest5.html"><img src="fruitpic1.jpg" alt="Fruit Picker"></a>
+    <h3>Fruit Picker</h3>
+    <p>Helps pick fruits from tall trees effortlessly.</p>
+    <div class="price">₹320</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Fruit Picker', 320, 'fruitpic1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest6.html"><img src="cornsheller1.jpg" alt="Corn Sheller"></a>
+    <h3>Corn Sheller</h3>
+    <p>Removes corn grains efficiently without damage.</p>
+    <div class="price">₹550</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Corn Sheller', 550, 'cornsheller1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest7.html"><img src="winbasket1.jpg" alt="Winnowing Basket"></a>
+    <h3>Winnowing Basket</h3>
+    <p>Traditional tool for separating grains from chaff.</p>
+    <div class="price">₹150</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Winnowing Basket', 150, 'winbasket1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest8.html"><img src="ricethresher1.jpg" alt="Rice Thresher"></a>
+    <h3>Rice Thresher</h3>
+    <p>Separates grains from harvested rice stalks.</p>
+    <div class="price">₹3,400</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Rice Thresher', 3400, 'ricethresher1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest9.html"><img src="manualreap1.jpg" alt="Manual Reaper"></a>
+    <h3>Manual Reaper</h3>
+    <p>Hand tool for faster harvesting of wheat and paddy.</p>
+    <div class="price">₹780</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Manual Reaper', 780, 'manualreap1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest10.html"><img src="minipowreap1.jpg" alt="Mini Power Reaper"></a>
+    <h3>Mini Power Reaper</h3>
+    <p>Motorized tool for quick harvesting of small farms.</p>
+    <div class="price">₹18,500</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Mini Power Reaper', 18500, 'minipowreap1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest11.html"><img src="combineharvest1.jpg" alt="Combine Harvester"></a>
+    <h3>Combine Harvester</h3>
+    <p>Advanced machine for cutting, threshing & cleaning crops.</p>
+    <div class="price">₹35,000</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Combine Harvester', 35000, 'combineharvest1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="harvest12.html"><img src="leafpluck1.jpg" alt="Tea Leaf Plucker"></a>
+    <h3>Tea Leaf Plucker</h3>
+    <p>Lightweight tool for easy and fast tea leaf harvesting.</p>
+    <div class="price">₹650</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Tea Leaf Plucker', 650, 'leafpluck1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

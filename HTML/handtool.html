@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Tools - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e1; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover { transform: translateY(-5px); }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #2a6c20;
+      color: white;
+      font-size: 14px;
+    }
+
+    .add-cart:hover { background-color: #3e8e41; }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Hand Tools Collection</h1>
+  <p>Essential farming tools for effortless cultivation 🚜🌱</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="tool1.html"><img src="handtrowel1.jpg"></a>
+    <h3>Hand Trowel</h3>
+    <p>Perfect for digging and planting seedlings.</p>
+    <div class="price">₹120</div>
+    <button class="add-cart" onclick="addToCart('Hand Trowel',120,'handtrowel1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool2.html"><img src="handfork1.jpg"></a>
+    <h3>Hand Fork</h3>
+    <p>Ideal for loosening, lifting and turning soil.</p>
+    <div class="price">₹150</div>
+    <button class="add-cart" onclick="addToCart('Hand Fork',150,'handfork1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool3.html"><img src="gardenhoe1.jpg"></a>
+    <h3>Garden Hoe</h3>
+    <p>Used for shaping soil and removing weeds.</p>
+    <div class="price">₹250</div>
+    <button class="add-cart" onclick="addToCart('Garden Hoe',250,'gardenhoe1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool4.html"><img src="handrake1.jpg"></a>
+    <h3>Hand Rake</h3>
+    <p>Useful for clearing leaves and garden debris.</p>
+    <div class="price">₹180</div>
+    <button class="add-cart" onclick="addToCart('Hand Rake',180,'handrake1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool5.html"><img src="pruningshears1.jpg"></a>
+    <h3>Pruning Shears</h3>
+    <p>For trimming and maintaining healthy plant growth.</p>
+    <div class="price">₹300</div>
+    <button class="add-cart" onclick="addToCart('Pruning Shears',300,'pruningshears1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool6.html"><img src="handweeder1.jpg"></a>
+    <h3>Hand Weeder</h3>
+    <p>Efficient for removing weeds from the root.</p>
+    <div class="price">₹160</div>
+    <button class="add-cart" onclick="addToCart('Hand Weeder',160,'handweeder1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool7.html"><img src="khurpi1.jpg"></a>
+    <h3>Khurpi (Garden Spade)</h3>
+    <p>A traditional tool for digging and tilling soil.</p>
+    <div class="price">₹140</div>
+    <button class="add-cart" onclick="addToCart('Khurpi',140,'khurpi1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool8.html"><img src="sickle1.jpg"></a>
+    <h3>Sickle</h3>
+    <p>Used for cutting grass, crops and weeds.</p>
+    <div class="price">₹200</div>
+    <button class="add-cart" onclick="addToCart('Sickle',200,'sickle1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool9.html"><img src="handsprayer1.jpg"></a>
+    <h3>Hand Sprayer</h3>
+    <p>Portable sprayer for applying fertilizers and pesticides.</p>
+    <div class="price">₹350</div>
+    <button class="add-cart" onclick="addToCart('Hand Sprayer',350,'handsprayer1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool10.html"><img src="gardengloves1.jpg"></a>
+    <h3>Garden Gloves</h3>
+    <p>Protects hands while gardening and farming.</p>
+    <div class="price">₹90</div>
+    <button class="add-cart" onclick="addToCart('Garden Gloves',90,'gardengloves1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool11.html"><img src="spade1.jpg"></a>
+    <h3>Spade</h3>
+    <p>For digging large soil areas and mixing compost.</p>
+    <div class="price">₹420</div>
+    <button class="add-cart" onclick="addToCart('Spade',420,'spade1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="tool12.html"><img src="handculti1.jpg"></a>
+    <h3>Hand Cultivator</h3>
+    <p>Loosens and aerates soil for better root growth.</p>
+    <div class="price">₹220</div>
+    <button class="add-cart" onclick="addToCart('Hand Cultivator',220,'handculti1.jpg')">Add to Cart</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

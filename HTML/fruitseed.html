@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Seeds - AgroLife</title>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;} 
+  body{background-color:#eaf5e1;}
+
+  header{
+    background-color:#1c5a17;color:white;display:flex;
+    justify-content:space-between;align-items:center;padding:20px 60px;
+  }
+  header nav a{color:white;text-decoration:none;margin-left:30px;font-weight:500;}
+  header nav a:hover{color:#b4f28f;}
+
+  .page-title{text-align:center;background-color:#0b2b03;color:#d8f3dc;padding:40px 0;}
+  .page-title h1{font-size:34px;}
+
+  .products-container{
+    display:flex;flex-wrap:wrap;justify-content:center;
+    gap:30px;padding:50px;
+  }
+
+  .product-card{
+    background:white;width:260px;border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    text-align:center;padding:20px;transition:0.3s;
+  }
+  .product-card:hover{transform:translateY(-5px);}
+
+  .product-card img{
+    width:100%;height:180px;border-radius:10px;object-fit:cover;cursor:pointer;
+  }
+  .product-card h3{margin:15px 0 5px;color:#124d03;}
+  .product-card p{font-size:14px;color:#555;}
+  .product-card .price{color:#0b2b03;font-weight:600;margin:10px 0;}
+
+  .add-cart{
+    padding:8px 16px;border:none;border-radius:20px;
+    cursor:pointer;color:white;font-size:14px;background-color:#2a6c20;
+  }
+  .add-cart:hover{background-color:#3e8e41;}
+
+  footer{
+    background-color:#1c3b28;color:white;text-align:center;
+    padding:15px;margin-top:40px;
+  }
+</style>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Fruit Seeds Collection 🍎</h1>
+  <p>Bring sweetness to your farm with our organic fruit seeds!</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <img src="mango1.jpg">
+    <h3>Mango Seeds</h3>
+    <p>Grow juicy, tropical mangoes.</p>
+    <div class="price">₹80</div>
+    <button class="add-cart" onclick="addToCart('Mango Seeds',80,'mango1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="watermelon1.jpg">
+    <h3>Watermelon Seeds</h3>
+    <p>Sweet and refreshing summer fruit.</p>
+    <div class="price">₹60</div>
+    <button class="add-cart" onclick="addToCart('Watermelon Seeds',60,'watermelon1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="papaya1.jpg">
+    <h3>Papaya Seeds</h3>
+    <p>Rich in antioxidants & fiber.</p>
+    <div class="price">₹55</div>
+    <button class="add-cart" onclick="addToCart('Papaya Seeds',55,'papaya1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="orange1.jpg">
+    <h3>Orange Seeds</h3>
+    <p>Full of vitamin C.</p>
+    <div class="price">₹70</div>
+    <button class="add-cart" onclick="addToCart('Orange Seeds',70,'orange1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="apple1.jpg">
+    <h3>Apple Seeds</h3>
+    <p>Start your own orchard.</p>
+    <div class="price">₹85</div>
+    <button class="add-cart" onclick="addToCart('Apple Seeds',85,'apple1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="grape1.jpg">
+    <h3>Grape Seeds</h3>
+    <p>Grow sweet juicy grapes.</p>
+    <div class="price">₹75</div>
+    <button class="add-cart" onclick="addToCart('Grape Seeds',75,'grape1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="guava1.jpg">
+    <h3>Guava Seeds</h3>
+    <p>Rich in vitamin C & flavor.</p>
+    <div class="price">₹50</div>
+    <button class="add-cart" onclick="addToCart('Guava Seeds',50,'guava1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Pomegranate1.jpg">
+    <h3>Pomegranate Seeds</h3>
+    <p>Packed with nutrients.</p>
+    <div class="price">₹90</div>
+    <button class="add-cart" onclick="addToCart('Pomegranate Seeds',90,'Pomegranate1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="sberry1.jpg">
+    <h3>Strawberry Seeds</h3>
+    <p>Sweet & colorful berries.</p>
+    <div class="price">₹100</div>
+    <button class="add-cart" onclick="addToCart('Strawberry Seeds',100,'sberry1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="banana1.jpg">
+    <h3>Banana Seeds</h3>
+    <p>Grow rich yellow bananas.</p>
+    <div class="price">₹65</div>
+    <button class="add-cart" onclick="addToCart('Banana Seeds',65,'banana1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="pineapple1.jpg">
+    <h3>Pineapple Seeds</h3>
+    <p>Sweet tropical fruits.</p>
+    <div class="price">₹70</div>
+    <button class="add-cart" onclick="addToCart('Pineapple Seeds',70,'pineapple1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="cherry1.jpg">
+    <h3>Cherry Seeds</h3>
+    <p>Grow juicy delicious cherries.</p>
+    <div class="price">₹95</div>
+    <button class="add-cart" onclick="addToCart('Cherry Seeds',95,'cherry1.jpg')">Add to Cart</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 AgroLife. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fertilizers - Green Harvest Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #e9efc0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #124d03;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #b4f28f;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+    }
+
+    .page-title h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    .page-title p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    /* Fertilizer Grid */
+    .fertilizer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .fertilizer-card {
+      background-color: white;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .fertilizer-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .fertilizer-card h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #124d03;
+    }
+
+    .fertilizer-card p {
+      color: #555;
+      font-size: 14px;
+      margin: 10px 0 15px;
+    }
+
+    .fertilizer-card button {
+      background-color: #1c5a17;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .fertilizer-card button:hover {
+      background-color: #307a2b;
+    }
+
+    .fertilizer-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #1c3b28;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>AgroLife</h2>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Fertilizers Collection</h1>
+    <p>Enhance soil fertility and crop yield with our organic fertilizers 🌿</p>
+  </div>
+
+  <!-- Fertilizers Section -->
+  <section class="fertilizer-container">
+    <div class="fertilizer-card">
+      <img src="orgfert1.jpg" alt="Organic Fertilizer">
+      <h3>Organic Fertilizer</h3>
+      <p>Eco-friendly fertilizer made from natural compost materials for healthy soil.</p>
+      <button onclick="location.href='organicfertilizers.html'">View More</button>
+    </div>
+
+    <div class="fertilizer-card">
+      <img src="biofert1.jpg" alt="Bio Fertilizer">
+      <h3>Bio Fertilizer</h3>
+      <p>Microbe-based fertilizers that promote plant growth naturally and safely.</p>
+      <button onclick="location.href='biofert.html'">View More</button>
+    </div>
+
+    <div class="fertilizer-card">
+      <img src="comp1.jpg" alt="Compost Fertilizer">
+      <h3>Compost Fertilizer</h3>
+      <p>Rich compost blends improving soil texture and plant nutrient absorption.</p>
+      <button onclick="location.href='compostfert.html'">View More</button>
+    </div>
+
+    <div class="fertilizer-card">
+      <img src="liquid1.jpg" alt="Liquid Fertilizer">
+      <h3>Liquid Fertilizer</h3>
+      <p>Fast-acting fertilizers ideal for quick nutrient supply to your crops.</p>
+      <button onclick="location.href='liquidfert.html'">View More</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

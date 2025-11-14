@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farming Tools - Green Harvest Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #e9efc0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #124d03;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #b4f28f;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+    }
+
+    .page-title h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    .page-title p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    /* Tools Grid */
+    .tools-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .tool-card {
+      background-color: white;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .tool-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .tool-card h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #124d03;
+    }
+
+    .tool-card p {
+      color: #555;
+      font-size: 14px;
+      margin: 10px 0 15px;
+    }
+
+    .tool-card button {
+      background-color: #1c5a17;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .tool-card button:hover {
+      background-color: #307a2b;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #1c3b28;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>AgroLife</h2>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Farming Tools Collection</h1>
+    <p>Discover reliable and modern tools to simplify your farming work 🔧</p>
+  </div>
+
+  <!-- Tools Section -->
+  <section class="tools-container">
+    <div class="tool-card">
+      <img src="handtool1.jpg" alt="Hand Tools">
+      <h3>Hand Tools</h3>
+      <p>Durable tools like spades, hoes, and trowels for everyday farm tasks.</p>
+      <button onclick="location.href='handtool.html'">View More</button>
+    </div>
+
+    <div class="tool-card">
+      <img src="powertool1.jpg" alt="Power Tools">
+      <h3>Power Tools</h3>
+      <p>Efficient electric and battery-powered tools for modern farmers.</p>
+      <button onclick="location.href='powertool.html'">View More</button>
+    </div>
+
+    <div class="tool-card">
+      <img src="irrtool1.jpg" alt="Irrigation Tools">
+      <h3>Irrigation Tools</h3>
+      <p>Smart irrigation solutions — sprinklers, drip systems, and water pumps.</p>
+      <button onclick="location.href='irrigationtool.html'">View More</button>
+    </div>
+
+    <div class="tool-card">
+      <img src="harvesttool1.jpg" alt="Harvesting Tools">
+      <h3>Harvesting Tools</h3>
+      <p>Advanced tools for fast, safe, and easy crop harvesting.</p>
+      <button onclick="location.href='harvesttool.html'">View More</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

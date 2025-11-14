@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Fertilizers - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f3f7ea; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; font-size: 18px; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+    }
+
+    .add-cart { background-color: #2a6c20; }
+    .add-cart:hover { background-color: #3e8e41; transform: scale(1.03); }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Organic Fertilizers Collection</h1>
+  <p>Pure organic fertilizers to enrich your soil naturally 🌱</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="organic1.html"><img src="compost1.jpg" alt="Compost Fertilizer"></a>
+    <h3>Compost Fertilizer</h3>
+    <p>Improves soil structure and nutrient levels.</p>
+    <div class="price">₹80 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Compost Fertilizer', 80, 'compost1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic2.html"><img src="vermicompost1.jpg" alt="Vermicompost"></a>
+    <h3>Vermicompost</h3>
+    <p>Promotes strong root development & plant growth.</p>
+    <div class="price">₹90 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Vermicompost', 90, 'vermicompost1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic3.html"><img src="cowdung1.jpg" alt="Cow Dung Manure"></a>
+    <h3>Cow Dung Manure</h3>
+    <p>Traditional natural manure for soil enrichment.</p>
+    <div class="price">₹60 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Cow Dung Manure', 60, 'cowdung1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic4.html"><img src="bonemeal1.jpg" alt="Bone Meal"></a>
+    <h3>Bone Meal</h3>
+    <p>Phosphorus rich fertilizer for flowering plants.</p>
+    <div class="price">₹110 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Bone Meal', 110, 'bonemeal1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic5.html"><img src="neemcake1.jpg" alt="Neem Cake Fertilizer"></a>
+    <h3>Neem Cake Fertilizer</h3>
+    <p>Acts as fertilizer + pest repellent.</p>
+    <div class="price">₹100 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Neem Cake Fertilizer', 100, 'neemcake1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic6.html"><img src="seaweed1.jpg" alt="Seaweed Fertilizer"></a>
+    <h3>Seaweed Fertilizer</h3>
+    <p>Boosts plant resistance and rapid growth.</p>
+    <div class="price">₹150 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Seaweed Fertilizer', 150, 'seaweed1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic7.html"><img src="fishemusion1.jpg" alt="Fish Emulsion"></a>
+    <h3>Fish Emulsion</h3>
+    <p>Organic liquid promoting lush greenery.</p>
+    <div class="price">₹140 / L</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Fish Emulsion', 140, 'fishemusion1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic8.html"><img src="green1.jpg" alt="Green Manure"></a>
+    <h3>Green Manure</h3>
+    <p>Improves soil nitrogen & microbial activity.</p>
+    <div class="price">₹85 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Green Manure', 85, 'green1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic9.html"><img src="rock1.jpg" alt="Rock Phosphate"></a>
+    <h3>Rock Phosphate</h3>
+    <p>Natural mineral for gradual nutrient release.</p>
+    <div class="price">₹120 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Rock Phosphate', 120, 'rock1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic10.html"><img src="coco1.jpg" alt="Coco Peat"></a>
+    <h3>Coco Peat</h3>
+    <p>Enhances soil aeration & moisture retention.</p>
+    <div class="price">₹70 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Coco Peat', 70, 'coco1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic11.html"><img src="caster1.jpg" alt="Castor Cake"></a>
+    <h3>Castor Cake</h3>
+    <p>High nitrogen fertilizer for healthy growth.</p>
+    <div class="price">₹95 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Castor Cake', 95, 'caster1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="organic12.html"><img src="guano1.jpg" alt="Guano Fertilizer"></a>
+    <h3>Guano Fertilizer</h3>
+    <p>Balanced NPK booster for strong crops.</p>
+    <div class="price">₹160 / kg</div>
+    <div class="btn-container">
+      <button class="add-cart" onclick="addToCart('Guano Fertilizer', 160, 'guano1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>

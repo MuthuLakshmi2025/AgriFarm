@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeds - Green Harvest Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #e9efc0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #124d03;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #b4f28f;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+    }
+
+    .page-title h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    /* Seeds Grid */
+    .seeds-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .seed-card {
+      background-color: white;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .seed-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .seed-card h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #124d03;
+    }
+
+    .seed-card p {
+      color: #555;
+      font-size: 14px;
+      margin: 10px 0 15px;
+    }
+
+    .seed-card button {
+      background-color: #1c5a17;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .seed-card button:hover {
+      background-color: #307a2b;
+    }
+
+    .seed-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #1c3b28;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>AgroLife</h2>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Seeds Collection</h1>
+    <p>Choose from our wide range of organic, high-quality seeds 🌱</p>
+  </div>
+
+  <!-- Seeds Section -->
+  <section class="seeds-container">
+    <div class="seed-card">
+      <img src="veg1.jpg" alt="Vegetable Seeds">
+      <h3>Vegetable Seeds</h3>
+      <p>Grow your own veggies like tomato, brinjal, and okra.</p>
+      <button onclick="location.href='vegseed.html'">View More</button>
+
+    </div>
+
+    <div class="seed-card">
+      <img src="fruit1.jpg" alt="Fruit Seeds">
+      <h3>Fruit Seeds</h3>
+      <p>Fresh fruit seeds for organic gardens — watermelon, papaya & more.</p>
+      <button onclick="location.href='fruitseed.html'">View More</button>
+    </div>
+
+    <div class="seed-card">
+      <img src="flow1.jpg" alt="Flower Seeds">
+      <h3>Flower Seeds</h3>
+      <p>Brighten your garden with colorful marigold, rose, and sunflower seeds.</p>
+      <button onclick="location.href='flowerseed.html'">View More</button>
+    </div>
+
+    <div class="seed-card">
+      <img src="grain1.jpg" alt="Grain Seeds">
+      <h3>Grain Seeds</h3>
+      <p>High-yield rice, wheat, and millet seeds for sustainable farming.</p>
+     <button onclick="location.href='grainseed.html'">View More</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

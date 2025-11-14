@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Seeds - Green Harvest Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #eaf5e1; }
+
+    header {
+      background-color: #1c5a17;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+
+    header nav a:hover { color: #b4f28f; }
+
+    .page-title {
+      text-align: center;
+      background-color: #0b2b03;
+      color: #d8f3dc;
+      padding: 40px 0;
+    }
+
+    .page-title h1 { font-size: 34px; }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+    }
+
+    .product-card {
+      background: white;
+      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover { transform: translateY(-5px); }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .product-card h3 { margin: 15px 0 5px; color: #124d03; }
+    .product-card p { font-size: 14px; color: #555; }
+    .product-card .price { color: #0b2b03; font-weight: 600; margin: 10px 0; }
+
+    .add-cart {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #2a6c20;
+      color: white;
+      font-size: 14px;
+    }
+
+    .add-cart:hover { background-color: #3e8e41; }
+
+    footer {
+      background-color: #1c3b28;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>AgroLife</h2>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="learn.html">Learn</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-title">
+  <h1>Flower Seeds Collection</h1>
+  <p>Brighten your garden with colorful, fragrant, and organic flower seeds 🌸</p>
+</div>
+
+<section class="products-container">
+
+  <div class="product-card">
+    <a href="flower1.html"><img src="rose1.jpg"></a>
+    <h3>Rose Seeds</h3>
+    <p>Grow beautiful roses in red, pink, and yellow varieties.</p>
+    <div class="price">₹75 / pack</div>
+    <button class="add-cart" onclick="addToCart('Rose Seeds',75,'rose1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower2.html"><img src="marigold1.jpg"></a>
+    <h3>Marigold Seeds</h3>
+    <p>Vibrant and easy to grow, perfect for festive gardens.</p>
+    <div class="price">₹50 / pack</div>
+    <button class="add-cart" onclick="addToCart('Marigold Seeds',50,'marigold1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower3.html"><img src="sunflower1.jpg"></a>
+    <h3>Sunflower Seeds</h3>
+    <p>Bright sunflowers to add warmth and cheer to your garden.</p>
+    <div class="price">₹65 / pack</div>
+    <button class="add-cart" onclick="addToCart('Sunflower Seeds',65,'sunflower1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower4.html"><img src="jasmine1.jpg"></a>
+    <h3>Jasmine Seeds</h3>
+    <p>Fragrant jasmine flowers for soothing and aromatic gardens.</p>
+    <div class="price">₹80 / pack</div>
+    <button class="add-cart" onclick="addToCart('Jasmine Seeds',80,'jasmine1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower5.html"><img src="tulip1.jpg"></a>
+    <h3>Tulip Seeds</h3>
+    <p>Grow colorful tulips for a touch of elegance and charm.</p>
+    <div class="price">₹90 / pack</div>
+    <button class="add-cart" onclick="addToCart('Tulip Seeds',90,'tulip1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower6.html"><img src="hibiscus1.jpg"></a>
+    <h3>Hibiscus Seeds</h3>
+    <p>Large hibiscus flowers for tropical beauty.</p>
+    <div class="price">₹60 / pack</div>
+    <button class="add-cart" onclick="addToCart('Hibiscus Seeds',60,'hibiscus1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower7.html"><img src="lotus1.jpg"></a>
+    <h3>Lotus Seeds</h3>
+    <p>Graceful lotus flowers for ponds and water gardens.</p>
+    <div class="price">₹95 / pack</div>
+    <button class="add-cart" onclick="addToCart('Lotus Seeds',95,'lotus1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower8.html"><img src="lavender1.jpg"></a>
+    <h3>Lavender Seeds</h3>
+    <p>Calming lavender for aromatic gardens.</p>
+    <div class="price">₹85 / pack</div>
+    <button class="add-cart" onclick="addToCart('Lavender Seeds',85,'lavender1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower9.html"><img src="daisy1.jpg"></a>
+    <h3>Daisy Seeds</h3>
+    <p>Simple and charming daisies.</p>
+    <div class="price">₹55 / pack</div>
+    <button class="add-cart" onclick="addToCart('Daisy Seeds',55,'daisy1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower10.html"><img src="chry1.jpg"></a>
+    <h3>Chrysanthemum Seeds</h3>
+    <p>Long-lasting bright flowers.</p>
+    <div class="price">₹70 / pack</div>
+    <button class="add-cart" onclick="addToCart('Chrysanthemum Seeds',70,'chry1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower11.html"><img src="orchid1.jpg"></a>
+    <h3>Orchid Seeds</h3>
+    <p>Elegant orchids for luxurious gardens.</p>
+    <div class="price">₹120 / pack</div>
+    <button class="add-cart" onclick="addToCart('Orchid Seeds',120,'orchid1.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="flower12.html"><img src="carnation1.jpg"></a>
+    <h3>Carnation Seeds</h3>
+    <p>Colorful carnations symbolizing love.</p>
+    <div class="price">₹65 / pack</div>
+    <button class="add-cart" onclick="addToCart('Carnation Seeds',65,'carnation1.jpg')">Add to Cart</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Green Harvest Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image){
+    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push({ name, price, image, qty: 1 });
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    window.location.href = "addtocart.html";
+}
+</script>
+
+</body>
+</html>
